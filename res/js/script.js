@@ -42,4 +42,5 @@ function loadUserInfo(){
 function displayUserInfo(user){
     $('#name').text(user.firstname + " " + user.lastname);
     $('#epost').text(user.email);
+    $('.avatar').attr({"src": user.avatar});
 }
