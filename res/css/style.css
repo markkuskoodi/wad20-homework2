@@ -65,7 +65,7 @@ header {
     z-index: 1;
 }
 
-header:hover {
+nav:hover {
     box-shadow: 0 -20px 30px #4d4d4d;
 }
 
@@ -202,3 +202,25 @@ nav div.avatar-container {
 .like-button.liked {
     background-color: #01579b;
 }
+
+.avatar{
+    size: 50px;
+}
+
+.user-info{
+    display: none;
+    list-style: none;
+    position: absolute;
+    margin-top: -5px;
+    right: 0;
+    height: 200px;
+    width: 250px;
+    background-color: white;
+}
+
+.user-info li{
+    display: block;
+    float: left;
+}
+
+
