@@ -14,4 +14,32 @@ $(function(){
             $(".user-info").slideToggle("fast");
         });
     });
+
+    loadUserInfo()
+        .then(function (user){
+            displayUserInfo(user)
+        })
+        .catch(function (){
+            alert('Somethings wrong')
+        })
+
 });
+
+function loadUserInfo(){
+    return $.get(
+        {
+            url: 'https://private-anon-aee74b6ac8-wad20postit.apiary-mock.com/users/1',
+            success: function (response){
+                return response;
+            },
+            error: function (){
+                alert('Error')
+            }
+        }
+    )
+}
+
+function displayUserInfo(user){
+    $('#name').text(user.firstname + " " + user.lastname);
+    $('#epost').text(user.email);
+}

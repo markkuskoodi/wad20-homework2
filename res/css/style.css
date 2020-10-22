@@ -212,6 +212,7 @@ nav div.avatar-container {
     list-style: none;
     position: absolute;
     margin-top: -3px;
+    padding-left: 15px;
     right: 0;
     height: 200px;
     width: 250px;
