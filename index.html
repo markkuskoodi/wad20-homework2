@@ -1,90 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="res/js/script.js"></script>
     <link rel="stylesheet" href="res/css/style.css">
     <title>postIt! Just Post It</title>
-  </head>
-  <body>
-    <header>
-      <nav>
+</head>
+<body>
+<header>
+    <nav>
         <div class="logo-container">
-          <img src="res/images/logo.png" alt="postIt">
+            <img src="res/images/logo.png" alt="postIt">
         </div>
         <div class="search-container">
-          <input type="text" name="search"><button type="button">Search</button>
+            <input type="text" name="search">
+            <button type="button">Search</button>
         </div>
         <div class="avatar-container">
-          <img src="res/images/avatar.png" class="avatar" alt="Me">
-          <ul class="user-info">
-            <p id="name"></p>
-            <p id="epost"></p>
-            <hr>
-            <a href="#" onclick="location.href='browse.html'">Browse</a>
-            <hr>
-            <a href="#" onclick="location.href='login.html'">Log out</a>
-          </ul>
+            <img src="res/images/avatar.png" class="avatar" alt="Me">
+            <ul class="user-info">
+                <p id="name"></p>
+                <p id="epost"></p>
+                <hr>
+                <a href="#" onclick="location.href='browse.html'">Browse</a>
+                <hr>
+                <a href="#" onclick="location.href='login.html'">Log out</a>
+            </ul>
         </div>
-      </nav>
-    </header>
-    <section class="main-container">
-      <div class="post">
-        <div class="post-author">
-          <span class="post-author-info">
-            <img src="res/images/avatar.png" alt="Post author">
-            <small>John Doe</small>
-          </span>
-          <small>Sep 18, 2020 15:16</small>
-        </div>
-        <div class="post-image">
-          <img src="res/images/posts/1.jpg" alt="">
-        </div>
-        <div class="post-title">
-          <h3>I think it's going to rain</h3>
-        </div>
-        <div class="post-actions">
-          <button type="button" name="like" class="like-button">100k</button>
-        </div>
-      </div>
-
-      <div class="post">
-        <div class="post-author">
-          <span class="post-author-info">
-            <img src="res/images/avatar.png" alt="Post author">
-            <small>John Doe</small>
-          </span>
-          <small>Sep 18, 2020 15:16</small>
-        </div>
-        <div class="post-title">
-          <h3>Which weighs more, a pound of feathers or a pound of bricks?</h3>
-        </div>
-        <div class="post-actions">
-          <button type="button" name="like" class="like-button">15k</button>
-        </div>
-      </div>
-
-      <div class="post">
-        <div class="post-author">
-          <span class="post-author-info">
-            <img src="res/images/avatar.png" alt="Post author">
-            <small>John Doe</small>
-          </span>
-          <small>Sep 18, 2020 17:18</small>
-        </div>
-        <div class="post-image">
-          <img src="res/images/posts/2.jpg" alt="">
-        </div>
-        <div class="post-title">
-          <h3>Felt cute, might delete later</h3>
-        </div>
-        <div class="post-actions">
-          <button type="button" name="like" class="like-button liked">10k</button>
-        </div>
-      </div>
-
-    </section>
-  </body>
+    </nav>
+</header>
+<section class="main-container">
+    <posts>
+    </posts>
+</section>
+</body>
 </html>
