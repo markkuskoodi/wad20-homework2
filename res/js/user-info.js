@@ -22,6 +22,7 @@ $(function () {
         .catch(function () {
             alert('Somethings wrong')
         })
+
 });
 
 function loadUserInfo() {

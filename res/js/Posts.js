@@ -31,8 +31,6 @@ function loadPostInfo() {
                         let vid = $('<iframe>').attr('src', post.media.url);
                         video.append(vid);
                     }
-
-
                 }
 
 
