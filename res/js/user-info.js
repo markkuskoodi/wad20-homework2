@@ -22,9 +22,6 @@ $(function () {
         .catch(function () {
             alert('Somethings wrong')
         })
-
-    loadPostInfo()
-
 });
 
 function loadUserInfo() {
