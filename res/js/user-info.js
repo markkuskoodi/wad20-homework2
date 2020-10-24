@@ -20,7 +20,7 @@ $(function () {
             displayUserInfo(user)
         })
         .catch(function () {
-            alert('Somethings wrong')
+            alert('Something went wrong')
         })
 
 });
