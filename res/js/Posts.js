@@ -16,7 +16,6 @@ $(function () {
 
 function loadPostInfo() {
     return $.get('https://private-anon-bd07188f71-wad20postit.apiary-mock.com/posts', function (response) {
-            let i = 1
             for (post of response) {
                 let div = $('<div class="post">');
                 let postauthor = $('<div class="post-author">');
