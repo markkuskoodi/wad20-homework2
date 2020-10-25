@@ -51,7 +51,6 @@ function displayUsersInfo(user) {
 
 
     div.append(avatar);
-    div.append('<br>');
     div.append(name);
     div.append(actions);
     actions.append(follow);
