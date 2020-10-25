@@ -233,24 +233,36 @@ nav div.avatar-container {
     margin: 10px 0 10px -15px;
 }
 
+.users {
+    padding: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
 .user {
-    width: auto;
-    height: 50%;
+    width: 100%;
+    height: auto;
     margin: 5%;
     box-shadow: 0 0 10px rgba(74, 87, 95, 0.33);
     border-radius: 10px;
+    display: inline-block;
+    max-width: 220px;
 }
+
 
 .user img {
     width: 90px;
     height: 90px;
     border-radius: 100%;
     object-fit: cover;
-    object-position: top;
-    margin: 10px;
+    object-position: center;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 30px;
     padding-bottom: 10px;
-
 }
+
+
 
 .follow-button {
     background-color: #590f6d;
@@ -258,7 +270,6 @@ nav div.avatar-container {
     height: 30px;
     padding: 5px;
     margin-left: 30%;
-
 }
 
 .flexBox {
@@ -266,7 +277,9 @@ nav div.avatar-container {
     justify-content: center;
 }
 
-
+.name {
+    text-align: center;
+}
 
 
 

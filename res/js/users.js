@@ -1,17 +1,9 @@
 $(function () {
     loadUsersInfo()
         .then(function (response) {
-            let i = 0;
             console.log("1")
             for (let user of response) {
-                if(i % 2 === 0) {
-                    $('users1').append(displayUsersInfo(user));
-                    i++;
-                }
-                else{
-                    $('users2').append(displayUsersInfo(user));
-                    i++;
-                }
+                $('users').append(displayUsersInfo(user));
             }
         })
         .catch(function () {
@@ -53,11 +45,13 @@ function displayUsersInfo(user) {
 
     let div = $('<div class="user">');
     let avatar = $('<img alt="Avatar">').attr('src', user.avatar);
-    let name = $('<small>').text(user.firstname + " " + user.lastname);
+    let name = $('<h3 class="name">').text(user.firstname + " " + user.lastname);
     let actions = $('<div class="user-actions">');
     let follow = $('<button type="button" name="follow" class="follow-button">').text("Follow");
 
+
     div.append(avatar);
+    div.append('<br>');
     div.append(name);
     div.append(actions);
     actions.append(follow);
