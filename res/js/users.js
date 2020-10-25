@@ -13,7 +13,11 @@ function loadUsersInfo() {
         {
             url: 'https://private-anon-70efa6a1a7-wad20postit.apiary-mock.com/profiles',
             success: function (response) {
-                return response;
+
+                for (let user of response) {
+                    return user;
+                }
+
             },
             error: function () {
                 alert('error')

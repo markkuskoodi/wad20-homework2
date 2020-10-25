@@ -1,8 +1,8 @@
 $(function () {
     loadPostInfo()
 
-    var clicked = false
-    $(document).on("click", '.like-button', function(event){
+    let clicked = false;
+    $(document).on("click", '.like-button', function(){
         if(!clicked) {
             $(this).css('background-color', '#429bf5');
             clicked = true
@@ -16,11 +16,11 @@ $(function () {
 
 function loadPostInfo() {
     return $.get('https://private-anon-bd07188f71-wad20postit.apiary-mock.com/posts', function (response) {
-            for (post of response) {
+            for (let post of response) {
                 let div = $('<div class="post">');
                 let postauthor = $('<div class="post-author">');
                 let span = $('<span class="post-author-info">');
-                let avatar = $('<img>').attr('src', post.author.avatar);
+                let avatar = $('<img alt="Author avatar">').attr('src', post.author.avatar);
                 let name = $('<small>').text(post.author.firstname + " " + post.author.lastname);
                 let date = $('<small>').text(post.createTime);
                 let postimage = $('<div class="post-image">');
@@ -35,11 +35,11 @@ function loadPostInfo() {
                     title.append(text);
                 }
                 if (post.media != null) {
-                    if (post.media.type == "image") {
+                    if (post.media.type === "image") {
                         let image = $('<img>').attr('src', post.media.url);
                         postimage.append(image);
                     }
-                    if (post.media.type == "video") {
+                    if (post.media.type === "video") {
                         let vid = $('<iframe>').attr('src', post.media.url);
                         video.append(vid);
                     }
