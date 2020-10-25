@@ -234,9 +234,7 @@ nav div.avatar-container {
 }
 
 .users {
-    padding: 10px;
-    overflow: hidden;
-    text-align: center;
+    text-align:center;
 }
 
 .user {
