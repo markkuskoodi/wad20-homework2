@@ -11,18 +11,19 @@ $(function () {
         });
 
     let clicked = false;
-    $(document).on("click", '.follow-button', function(){
-        if(!clicked) {
+
+    $(document).on("click", '.follow-button', function () {
+        if (clicked) {
             $(this).css('background-color', '#590f6d');
             $(this).css('color', '#ffffff')
             $(this).text("Follow");
-            clicked = true
-        } else{
+            clicked = false
+        } else {
             $(this).css('background-color', '#ffffff')
             $(this).css('border', '2px solid purple')
             $(this).css('color', '#590f6d')
             $(this).text("Followed");
-            clicked = false
+            clicked = true
         }
     })
 });
