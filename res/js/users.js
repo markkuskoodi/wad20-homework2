@@ -1,7 +1,9 @@
 $(function () {
     loadUsersInfo()
-        .then(function () {
-            loadUsersInfo()
+        .then(function (response) {
+            for (let user of response) {
+                $('users').append(displayUserInfo(user));
+            }
         })
         .catch(function () {
             alert('Error loading user info')
@@ -11,11 +13,14 @@ $(function () {
     $(document).on("click", '.follow-button', function(){
         if(!clicked) {
             $(this).css('background-color', '#590f6d');
+            $(this).css('color', '#ffffff')
+            $(this).text("Follow");
             clicked = true
-        }
-        else{
-            $(this).css('background-color', '#fffefe')
-            // $(this).css('border', ) sama lillaga tuleb border
+        } else{
+            $(this).css('background-color', '#ffffff')
+            $(this).css('border', '2px solid purple')
+            $(this).css('color', '#590f6d')
+            $(this).text("Followed");
             clicked = false
         }
     })
@@ -26,24 +31,27 @@ function loadUsersInfo() {
         {
             url: 'https://private-anon-70efa6a1a7-wad20postit.apiary-mock.com/profiles',
             success: function (response) {
-                for (let user of response) {
-                    let div = $('<div class="user">');
-                    let avatar = $('<img alt="Avatar">').attr('src', user.avatar);
-                    let name = $('<small>').text(user.firstname + " " + user.lastname);
-                    let actions = $('<div class="user-actions">');
-                    let follow = $('<button type="button" name="follow" class="follow-button">').text("Follow");
-
-                    div.append(avatar);
-                    div.append(name);
-                    div.append(actions);
-                    actions.append(follow);
-
-                    $('users').append(div);
-                }
+                return response;
             },
             error: function () {
                 alert('error')
             }
         }
     )
+}
+
+function displayUserInfo(user) {
+
+    let div = $('<div class="user">');
+    let avatar = $('<img alt="Avatar">').attr('src', user.avatar);
+    let name = $('<small>').text(user.firstname + " " + user.lastname);
+    let actions = $('<div class="user-actions">');
+    let follow = $('<button type="button" name="follow" class="follow-button">').text("Follow");
+
+    div.append(avatar);
+    div.append(name);
+    div.append(actions);
+    actions.append(follow);
+
+    return div;
 }

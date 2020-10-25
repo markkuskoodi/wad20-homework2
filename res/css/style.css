@@ -234,15 +234,16 @@ nav div.avatar-container {
 }
 
 .user {
-    width: 50%;
+    width: 90%;
+    height: 25%;
     margin: 15px auto;
     box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
     border-radius: 5px;
 }
 
 .user img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 100%;
     object-fit: cover;
     object-position: top;
@@ -251,10 +252,16 @@ nav div.avatar-container {
 
 .follow-button {
     background-color: #590f6d;
-    width: 60px;
+    width: 40%;
     height: 25px;
-    text-align: center;
-    border: none;
+    padding: 1px;
+
+}
+
+.flexBox {
+    display: flex;
+    justify-content: center;
+
 }
 
 
