@@ -234,8 +234,8 @@ nav div.avatar-container {
 }
 
 .user {
-    width: 90%;
-    height: 25%;
+    width: 150%;
+    height: 50%;
     margin: 15px auto;
     box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
     border-radius: 5px;
@@ -261,7 +261,6 @@ nav div.avatar-container {
 .flexBox {
     display: flex;
     justify-content: center;
-
 }
 
 

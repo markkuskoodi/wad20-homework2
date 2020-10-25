@@ -1,8 +1,16 @@
 $(function () {
     loadUsersInfo()
         .then(function (response) {
+            let i = 0;
             for (let user of response) {
-                $('users').append(displayUserInfo(user));
+                if(i % 2 == 0) {
+                    $('users1').append(displayUserInfo(user));
+                    i++;
+                }
+                else{
+                    $('users2').append(displayUserInfo(user));
+                    i++;
+                }
             }
         })
         .catch(function () {
