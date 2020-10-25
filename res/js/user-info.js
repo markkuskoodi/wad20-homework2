@@ -40,6 +40,7 @@ function loadUserInfo() {
 }
 
 function displayUserInfo(user) {
+    console.log(1)
     $('#name').text(user.firstname + " " + user.lastname);
     $('#epost').text(user.email);
     $('.avatar').attr({"src": user.avatar});

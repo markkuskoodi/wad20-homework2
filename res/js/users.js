@@ -2,13 +2,14 @@ $(function () {
     loadUsersInfo()
         .then(function (response) {
             let i = 0;
+            console.log("1")
             for (let user of response) {
                 if(i % 2 == 0) {
-                    $('users1').append(displayUserInfo(user));
+                    $('users1').append(displayUsersInfo(user));
                     i++;
                 }
                 else{
-                    $('users2').append(displayUserInfo(user));
+                    $('users2').append(displayUsersInfo(user));
                     i++;
                 }
             }
@@ -48,7 +49,7 @@ function loadUsersInfo() {
     )
 }
 
-function displayUserInfo(user) {
+function displayUsersInfo(user) {
 
     let div = $('<div class="user">');
     let avatar = $('<img alt="Avatar">').attr('src', user.avatar);
