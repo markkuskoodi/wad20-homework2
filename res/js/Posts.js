@@ -45,7 +45,6 @@ function loadPostInfo() {
                     }
                 }
 
-
                 div.append(postauthor);
                 postauthor.append(span);
                 span.append(avatar);

@@ -45,3 +45,5 @@ function displayUserInfo(user) {
     $('#epost').text(user.email);
     $('.avatar').attr({"src": user.avatar});
 }
+
+

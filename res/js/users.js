@@ -4,7 +4,7 @@ $(function () {
             let i = 0;
             console.log("1")
             for (let user of response) {
-                if(i % 2 == 0) {
+                if(i % 2 === 0) {
                     $('users1').append(displayUsersInfo(user));
                     i++;
                 }
